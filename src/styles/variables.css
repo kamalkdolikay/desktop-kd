@@ -1,0 +1,28 @@
+:root {
+  --color-primary: #e0e0ff;
+  --color-background: #faf400;
+  --color-accent: #413475;
+  --color-shadow: rgba(0, 0, 0, 0.3);
+  --color-button-bg: #d0d0ef;
+  --color-button-bg-active: #b0b0cf;
+  --color-dialog-header: antiquewhite;
+  --color-menubar: #000;
+  --color-menubar-active: #3500ff;
+  --color-menubar-text: #fff;
+  --color-dropdown-bg: aliceblue;
+  --color-dropdown-text: blueviolet;
+
+  --spacing-sm: 2px;
+  --spacing-md: 10px;
+  --spacing-lg: 15px;
+  --spacing-xl: 20px;
+  --spacing-2xl: 40px;
+
+  --font-primary: 'Barriecito', sans-serif;
+  --font-dialog-title: 'Ranchers', sans-serif;
+  --font-tertiary: 'LondrinaLight', sans-serif;
+  --font-quaternary: 'BagelFatOne', sans-serif;
+  --font-quinary: 'LondrinaThin', sans-serif;
+  --font-senary: 'ComingSoon', sans-serif;
+  --font-septenary: 'Englebert', sans-serif;
+}
