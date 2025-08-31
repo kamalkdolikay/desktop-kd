@@ -1,7 +1,14 @@
 .loader {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  position: fixed; /* Ensure it covers the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000; /* Ensure it appears above other content */
 }
 
 .spinner {
