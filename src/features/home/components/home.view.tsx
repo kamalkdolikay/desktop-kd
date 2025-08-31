@@ -1,14 +1,8 @@
-import styles from '../styles/home.module.css';
+import MenuBar from '@/ui/menu-bar/components/menu-bar.component';
 
-interface HomeViewProps {
-  greetingMessage: string;
-}
-
-const HomeView: React.FC<HomeViewProps> = ({ greetingMessage }) => {
+const HomeView: React.FC = () => {
   return (
-    <h1 className={styles.helloWorld} aria-label={greetingMessage}>
-      {greetingMessage}
-    </h1>
+    <MenuBar />
   );
 };
 
