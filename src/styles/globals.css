@@ -1,0 +1,40 @@
+/* ============================= */
+/*  GLOBAL RESETS & UTILITIES    */
+/* ============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  background: url('@/assets/background/jhonny-bg-3.jpg') center / cover no-repeat fixed;
+}
+
+dialog {
+  all: unset;
+  display: block;
+}
+
+figure {
+  all: unset;
+  display: block;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-line {
+  border-top: 1px solid black;
+  width: 100%;
+  margin-top: 4px;
+}
