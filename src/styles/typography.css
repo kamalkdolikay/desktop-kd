@@ -1,0 +1,38 @@
+/* ============================= */
+/*  FONT IMPORTS                 */
+/* ============================= */
+
+@font-face {
+    font-family: "Barriecito";
+    src: url("../assets/fonts/Barriecito-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Ranchers";
+    src: url("../assets/fonts/Ranchers-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "LondrinaThin";
+    src: url("../assets/fonts/LondrinaSolid-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "LondrinaLight";
+    src: url("../assets/fonts/LondrinaSolid-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "BagelFatOne";
+    src: url("../assets/fonts/BagelFatOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ComingSoon";
+    src: url("../assets/fonts/ComingSoon-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Englebert";
+    src: url("../assets/fonts/Englebert-Regular.ttf") format("truetype");
+}
