@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
-  background-color: var(--colormenubar);
+  background-color: var(--color-menubar);
   color: var(--color-menubar-text);
   font-size: 17px;
   z-index: 1;
