@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import useMenuKeyNavigation from '@/hooks/menu-key-navigation.hook';
-import useDropdownKeyNavigation from '@/hooks/dropdown-key-navigation.hook';
+import useMenuKeyNavigation from '@/hooks/menu-bar/menu-key-navigation.hook';
+import useDropdownKeyNavigation from '@/hooks/menu-bar/dropdown-key-navigation.hook';
 import styles from '../styles/menu-bar.module.css';
 import type { MenuBarViewProps } from '../interface/menu-bar.interface';
 import { MENU_ITEMS } from '../constants/menu-bar.constants';
@@ -9,6 +9,7 @@ const MenuBarView: React.FC<MenuBarViewProps> = ({
   activeMenu,
   toggleMenu,
   menuRefs,
+  menubarRef,
   closeMenu,
   currentTime,
   changeBackground,
@@ -23,6 +24,7 @@ const MenuBarView: React.FC<MenuBarViewProps> = ({
     <nav
       className={`${styles['menu-bar']} flex-row`}
       aria-label="Main navigation"
+      ref={menubarRef}
     >
       <div className={styles['menu-bar__menu']}>
         {MENU_ITEMS.map(({ name, items }) => (
@@ -80,7 +82,7 @@ const MenuBarView: React.FC<MenuBarViewProps> = ({
           </div>
         ))}
       </div>
-      <div className="menu-bar__time">
+      <div className={styles['menu-bar__time']}>
         <time
           id="nav-date"
           className={styles['menu-bar__clock']}
