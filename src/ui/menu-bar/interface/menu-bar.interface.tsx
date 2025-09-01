@@ -2,6 +2,7 @@ export interface MenuBarViewProps {
   activeMenu: string | null;
   toggleMenu: (menu: string) => void;
   menuRefs: React.MutableRefObject<Record<string, HTMLDivElement | null>>;
+  menubarRef: React.RefObject<HTMLDivElement | null>;
   closeMenu: () => void;
   currentTime: Date;
   changeBackground: () => void;
