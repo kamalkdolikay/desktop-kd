@@ -19,7 +19,7 @@
   position: relative;
   padding: 6px 10px;
   cursor: pointer;
-  font-family: var(--font-dialog-title);
+  font-family: var(--font-secondary);
 }
 
 /* .menu-bar__item:focus {
@@ -71,11 +71,6 @@
 }
 
 .menu-bar__time {
-  font-weight: bold;
-  font-family: var(--font-senary);
+  font-family: var(--font-quaternary);
   padding: var(--spacing-sm);
-}
-
-.menu-bar__clock {
-  font-size: 1.1rem;
 }
