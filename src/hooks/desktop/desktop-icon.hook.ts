@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
-import type {
-  DesktopIcon,
-  DesktopIconPosition,
-} from '@/ui/desktop/interface/desktop.interface';
+import { useAppDispatch } from '@/store/redux.store';
+import { openDialog } from '@/store/slice/dialog.slice';
+import type { DesktopIcon, DesktopIconPosition } from '@/ui/desktop/interface/desktop.interface';
 import {
   ICON_HEIGHT,
   START_X,
@@ -10,27 +9,21 @@ import {
   DEFAULT_ICON_WIDTH,
   DEFAULT_ICON_HEIGHT,
 } from '@/ui/desktop/constants/desktop.constants';
-import type {
-  UseDesktopIconsProps,
-  DraggingIconsProps,
-} from './desktop-icon.interface';
+import type { UseDesktopIconsProps, DraggingIconsProps } from './desktop-icon.interface';
 
 const useDesktopIcons = ({ icons, menuBarHeight }: UseDesktopIconsProps) => {
   const [positions, setPositions] = useState<DesktopIconPosition[]>([]);
-  const [draggingIcon, setDraggingIcon] = useState<DraggingIconsProps | null>(
-    null,
-  );
+  const [draggingIcon, setDraggingIcon] = useState<DraggingIconsProps | null>(null);
   const iconRefs = useRef<Record<DesktopIcon['id'], HTMLDivElement | null>>({});
+  const dispatch = useAppDispatch();
 
   // Initialize icon positions
   useEffect(() => {
-    const initialPositions: DesktopIconPosition[] = icons.map(
-      (icon, index) => ({
-        id: icon.id,
-        left: START_X,
-        top: START_Y + index * ICON_HEIGHT,
-      }),
-    );
+    const initialPositions: DesktopIconPosition[] = icons.map((icon, index) => ({
+      id: icon.id,
+      left: START_X,
+      top: START_Y + index * ICON_HEIGHT,
+    }));
     setPositions(initialPositions);
   }, [icons]);
 
@@ -54,30 +47,20 @@ const useDesktopIcons = ({ icons, menuBarHeight }: UseDesktopIconsProps) => {
       if (!draggingIcon) return;
 
       const iconElement = iconRefs.current[draggingIcon.id];
-      const iconWidth =
-        iconElement?.getBoundingClientRect().width ?? DEFAULT_ICON_WIDTH;
-      const iconHeight =
-        iconElement?.getBoundingClientRect().height ?? DEFAULT_ICON_HEIGHT;
+      const iconWidth = iconElement?.getBoundingClientRect().width ?? DEFAULT_ICON_WIDTH;
+      const iconHeight = iconElement?.getBoundingClientRect().height ?? DEFAULT_ICON_HEIGHT;
       const newLeft = Math.max(
         0,
-        Math.min(
-          e.clientX - draggingIcon.offsetX,
-          window.innerWidth - iconWidth,
-        ),
+        Math.min(e.clientX - draggingIcon.offsetX, window.innerWidth - iconWidth),
       );
       const newTop = Math.max(
         menuBarHeight,
-        Math.min(
-          e.clientY - draggingIcon.offsetY,
-          window.innerHeight - iconHeight,
-        ),
+        Math.min(e.clientY - draggingIcon.offsetY, window.innerHeight - iconHeight),
       );
 
       setPositions((prev) =>
         prev.map((pos) =>
-          pos.id === draggingIcon.id
-            ? { ...pos, left: newLeft, top: newTop }
-            : pos,
+          pos.id === draggingIcon.id ? { ...pos, left: newLeft, top: newTop } : pos,
         ),
       );
     },
@@ -89,7 +72,7 @@ const useDesktopIcons = ({ icons, menuBarHeight }: UseDesktopIconsProps) => {
     setDraggingIcon(null);
   }, []);
 
-  // Bind mouse and touch events
+  // Bind mouse events
   useEffect(() => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('mouseup', handleMouseUp);
@@ -112,10 +95,10 @@ const useDesktopIcons = ({ icons, menuBarHeight }: UseDesktopIconsProps) => {
     (iconId: DesktopIcon['id']) => {
       const icon = icons.find((i) => i.id === iconId);
       if (icon) {
-        console.log(`Open dialog: ${icon.dialogId}`);
+        dispatch(openDialog(icon.dialogId));
       }
     },
-    [icons],
+    [icons, dispatch],
   );
 
   return {
