@@ -1,5 +1,6 @@
 .desktop {
     position: relative;
+    user-select: none;
 }
 
 .desktop__icons-container {
