@@ -1,0 +1,81 @@
+/* ============================= */
+/*  PROJECT                      */
+/* ============================= */
+.dialog-project {
+    /* display: none; */
+    position: fixed;
+    top: 40px;
+    bottom: 20px;
+    width: calc(100vw - 40px);
+    margin: 0 20px;
+    background: var(--color-primary);
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px 2px var(--color-accent);
+    border: 2px solid var(--color-accent);
+    overflow-y: auto;
+    gap: 20px;
+    font-family: var(--font-secondary);
+}
+
+/* ============================= */
+/*  SCROLLBAR                    */
+/* ============================= */
+.dialog-project::-webkit-scrollbar {
+    width: 0px; /* scrollbar width */
+}
+
+.dialog-project::-webkit-scrollbar-thumb {
+    background-color: #888; /* draggable part */
+    border-radius: 6px;
+    border: 3px solid #ddd; /* space between thumb & track */
+}
+
+.dialog-project::-webkit-scrollbar-track {
+    background-color: var(--color-primary); /* track color */
+}
+
+.dialog-project__content {
+    margin: 0px 40px;
+    gap: 20px;
+}
+
+.dialog-project__banner img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-style: double;
+}
+
+/* ============================= */
+/*  BACKGROUND SECTION           */
+/* ============================= */
+.dialog-project__background .flex-row {
+    gap: 10px;
+}
+
+.row-gap {
+    gap: 10px;
+}
+
+.dialog-project__background .flex-row > .flex-column:first-child {
+    flex: 0 0 80%; /* takes 80% width */
+}
+
+.dialog-project__background .flex-row > .flex-column:last-child {
+    flex: 0 0 20%; /* takes 20% width */
+}
+
+.first-column {
+    flex: 0 0 80%;
+}
+
+.last-column {
+    flex: 0 0 20%;
+}
+
+/* ============================= */
+/*  RESPONSIBILITY SECTION       */
+/* ============================= */
+.dialog-project__responsibility .flex-row {
+    gap: 10px;
+}
