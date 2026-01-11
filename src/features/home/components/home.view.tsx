@@ -1,6 +1,7 @@
 import MenuBar from '@/ui/menu-bar/components/menu-bar.component';
 import Desktop from '@/ui/desktop/components/desktop.component';
 import PortfolioDialog from '@/ui/portfolio-dialog/component/portfolio-dialog.component';
+import Project from '@/ui/project/component/project.component';
 
 const HomeView: React.FC = () => {
   return (
@@ -8,6 +9,7 @@ const HomeView: React.FC = () => {
       <MenuBar />
       <Desktop />
       <PortfolioDialog />
+      <Project />
     </>
   );
 };
