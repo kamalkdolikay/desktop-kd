@@ -4,7 +4,8 @@ import type { TypedUseSelectorHook } from 'react-redux';
 import homeReducer from '@/features/home/state/home.slice';
 import portfolioReducer from '@/features/portfolio/state/portfolio.slice';
 import menuBarReducer from '@/ui/menu-bar/state/menu-bar.slice';
-import dialogReducer from '@/store/slice/dialog.slice'
+import dialogReducer from '@/store/slice/dialog.slice';
+import projectReducer from '@/store/slice/project.slice';
 
 // Configure the Redux store
 const store = configureStore({
@@ -13,6 +14,7 @@ const store = configureStore({
     portfolio: portfolioReducer,
     menubar: menuBarReducer,
     dialog: dialogReducer,
+    project: projectReducer,
   },
 });
 
