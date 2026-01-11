@@ -5,6 +5,7 @@ import usePortfolioDialog from '@/hooks/portfolio-dialog/portfolio-dialog.hook';
 import PortfolioDialogView from './portfolio-dialog.view';
 import { PORTFOLIO_PROJECTS, PORTFOLIO_DIALOG_ID } from '../constants/portfolio-dialog.constant';
 import type { PortfolioProject } from '../interface/portfolio-dialog.interface';
+import { openProject } from '@/store/slice/project.slice';
 
 /**
  * PortfolioDialog component that manages the state and logic for the portfolio dialog.
@@ -26,7 +27,7 @@ const PortfolioDialog: React.FC = () => {
 
   const handleViewProject = (project: PortfolioProject) => {
     console.log(`Open dialog: ${project.dialogId}`);
-    // dispatch(openProjectDialog(project.dialogId));
+    dispatch(openProject(project.dialogId));
   };
 
   return (
