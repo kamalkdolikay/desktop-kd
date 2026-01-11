@@ -2,7 +2,7 @@ import { useEffect, useCallback } from 'react';
 
 // Close menus when clicking outside
 const useClickOutside = (
-  refs: React.MutableRefObject<Record<string, HTMLDivElement | null>>,
+  refs: React.RefObject<Record<string, HTMLDivElement | null>>,
   callback: () => void,
 ): void => {
   const handleClickOutside = useCallback(
