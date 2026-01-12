@@ -6,7 +6,6 @@ import camelCodeLogo from '@/assets/images/projects/camel-code-logo.png';
 import enviaLogo from '@/assets/images/projects/envia-logo.png';
 import portfolioLogo from '@/assets/images/projects/desktop-kd-logo.png';
 import wipLogo from '@/assets/images/projects/work-in-progress.png';
-import type { ProjectData } from '../interface/project.interface';
 
 export const PROJECTS_DATA = [
   // =========================================
