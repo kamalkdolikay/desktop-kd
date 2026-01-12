@@ -8,8 +8,8 @@ import malwareIcon from '@/assets/images/folder_icons/malware.png';
 import gameFolderIcon from '@/assets/images/folder_icons/game-folder.png';
 import portfolioImage from '@/assets/images/projects/desktop-kd-logo.png'
 import skynetImage from '@/assets/images/projects/skynet-logo.png'
-import organicaImage from '@/assets/images/projects/organica-logo.png'
-import mediSyncImage from '@/assets/images/projects/medisync-logo.png'
+import levelUpEduImage from '@/assets/images/projects/level-up-edu.png'
+import blocTheLineImage from '@/assets/images/projects/bloc_the_line_banner.png'
 import camelCodeImage from '@/assets/images/projects/camel-code-logo.png'
 import enviaImage from '@/assets/images/projects/envia-logo.png'
 import barsNBruisesImage from '@/assets/images/projects/bars-n-bruises-logo.png'
@@ -21,8 +21,8 @@ import type { PortfolioProject } from '../interface/portfolio-dialog.interface';
  */
 export const DialogId = {
   SKYNET: 'skynet-dialog',
-  ORGANICA: 'organica-dialog',
-  MEDISYNC: 'medisync-dialog',
+  LEVEL_UP_EDU: 'level-up-edu-dialog',
+  BLOC_THE_LINE: 'bloc-the-line-dialog',
   BARS_N_BRUISES: 'bars-n-bruises-dialog',
   CAMEL_CODE: 'camel-code-dialog',
   PORTFOLIO: 'portfolio-sub-dialog',
@@ -48,20 +48,20 @@ export const PORTFOLIO_PROJECTS: PortfolioProject[] = [
     altText: 'Skynet project preview',
   },
   {
-    id: 'organica',
-    title: 'Organica',
-    imgSrc: organicaImage,
+    id: 'level-up-edu',
+    title: 'Level Up Edu',
+    imgSrc: levelUpEduImage,
     folderIconSrc: folder5Icon,
-    dialogId: DialogId.ORGANICA,
-    altText: 'Organica project preview',
+    dialogId: DialogId.LEVEL_UP_EDU,
+    altText: 'Level Up Edu project preview',
   },
   {
-    id: 'medisync',
-    title: 'Medisync',
-    imgSrc: mediSyncImage,
+    id: 'bloc-the-line',
+    title: 'Bloc the Line',
+    imgSrc: blocTheLineImage,
     folderIconSrc: folder6Icon,
-    dialogId: DialogId.MEDISYNC,
-    altText: 'Medisync project preview',
+    dialogId: DialogId.BLOC_THE_LINE,
+    altText: 'Bloc the Line project preview',
   },
   {
     id: 'bars-n-bruises',
