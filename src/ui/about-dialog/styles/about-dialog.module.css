@@ -1,0 +1,96 @@
+/* ============================= */
+/*  ABOUT                        */
+/* ============================= */
+.dialog-about {
+    width: 50%;
+    max-width: 700px;
+    max-height: 90vh;
+    gap: 20px;
+    /* text-shadow: 4px 3px 0 #ffffff; */
+    overflow-y: auto;
+    font-family: var(--font-secondary);
+}
+
+.dialog-about__content {
+    margin: 0px 40px;
+    gap: 20px;
+}
+
+/* ============================= */
+/*  BANNER SECTION               */
+/* ============================= */
+.dialog-about__banner {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-shadow: 4px 3px 0 #ffffff;
+}
+
+/* ============================= */
+/*  BACKGROUND SECTION           */
+/* ============================= */
+.dialog-about__background :global(.flex-row) {
+    font-family: var(--font-tertiary);
+    gap: 10px;
+}
+
+.dialog-about__background .flex-row > .flex-column:first-child {
+    flex: 0 0 80%; /* takes 80% width */
+}
+
+.dialog-about__background .flex-row > .flex-column:last-child {
+    flex: 0 0 20%; /* takes 20% width */
+}
+
+/* ============================= */
+/*  OVERVIEW SECTION       */
+/* ============================= */
+.dialog-about__overview :global(.flex-row) {
+    font-family: var(--font-tertiary);
+    gap: 10px;
+}
+
+/* ============================= */
+/*  RESPONSIBILITY SECTION       */
+/* ============================= */
+.dialog-about__responsibility :global(.flex-row) {
+    font-family: var(--font-quinary);
+    gap: 10px;
+}
+
+/* ============================= */
+/*  DEMO SECTION       */
+/* ============================= */
+.dialog-about__demo p {
+    font-family: var(--font-tertiary);
+    gap: 10px;
+}
+
+/* ============================= */
+/*  RESEARCH SECTION       */
+/* ============================= */
+.dialog-about__research :global(.flex-row) {
+    font-family: var(--font-septenary);
+    gap: 10px;
+}
+
+/* ============================= */
+/*  RESPONSIVE DESIGN            */
+/* ============================= */
+@media (max-width: 1000px) {
+    .dialog-about {
+        width: 57%;
+    }
+}
+
+@media (max-width: 800px) {
+    .dialog-about {
+        width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    .dialog-about {
+        width: 80%;
+    }
+}
