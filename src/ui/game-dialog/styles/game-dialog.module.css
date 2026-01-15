@@ -1,6 +1,6 @@
 .dialog-game {
-  width: 889px;
-  height: 663px;
+  width: 800px; /* width: 889px; (for local testing) */
+  height: 600px; /* height: 663px; (for local testing) */
   box-sizing: content-box;
   overflow: hidden;
 }
