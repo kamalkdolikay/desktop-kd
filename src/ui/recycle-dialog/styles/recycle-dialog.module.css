@@ -1,0 +1,59 @@
+.dialog-recycle {
+    width: 600px;
+    height: 400px;
+    background-color: var(--color-primary);
+    font-family: var(--font-secondary);
+    border: 1px solid var(--color-border, #ccc);
+}
+
+.dialog-recycle__content {
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* Grid layout for the icons */
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+/* Individual item styling */
+.deleted-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8; /* Make them look "faded" or deleted */
+    transition: opacity 0.2s ease;
+}
+
+.deleted-item:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.364);
+    border-radius: 5px;
+}
+
+.item-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 10px;
+    filter: grayscale(0.5); /* Desaturate to look "dead" */
+}
+
+.item-label {
+    font-family: var(--font-tertiary);
+    font-size: 0.9rem;
+    word-break: break-word;
+    margin-bottom: 4px;
+    color: var(--color-text-primary);
+}
+
+.item-details {
+    font-family: var(--font-tertiary);
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+}
