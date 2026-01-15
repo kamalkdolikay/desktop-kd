@@ -3,6 +3,7 @@
   height: 600px; /* height: 663px; (for local testing) */
   box-sizing: content-box;
   overflow: hidden;
+  border: 1px solid var(--color-border, #ccc);
 }
 
 .dialog-game__frame {

@@ -9,6 +9,7 @@
     /* text-shadow: 4px 3px 0 #ffffff; */
     overflow-y: auto;
     font-family: var(--font-secondary);
+    border: 1px solid var(--color-border, #ccc);
 }
 
 .dialog-about__content {
