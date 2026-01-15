@@ -4,6 +4,7 @@ import PortfolioDialog from '@/ui/portfolio-dialog/component/portfolio-dialog.co
 import Project from '@/ui/project/component/project.component';
 import AboutDialog from '@/ui/about-dialog/component/about-dialog.component';
 import GameDialog from '@/ui/game-dialog/components/game-dialog.component';
+import RecycleDialog from '@/ui/recycle-dialog/components/recycle-dialog.component';
 
 const HomeView: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const HomeView: React.FC = () => {
       <Project />
       <AboutDialog />
       <GameDialog />
+      <RecycleDialog />
     </>
   );
 };
